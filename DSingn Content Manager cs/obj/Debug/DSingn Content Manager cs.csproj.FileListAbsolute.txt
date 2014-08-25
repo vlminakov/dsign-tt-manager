@@ -1,0 +1,18 @@
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\DSingn Content Manager cs.exe.config
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\DSingn Content Manager cs.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\DSingn Content Manager cs.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\DSUI.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\DSUI.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.csprojResolveAssemblyReference.cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.Form1.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.images.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.LoginForm.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.MoveToDialog.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.Properties.Resources.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.csproj.GenerateResource.Cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.TTSetNameWnd.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.PlayersListWnd.resources
