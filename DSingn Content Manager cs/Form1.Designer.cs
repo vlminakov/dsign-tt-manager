@@ -32,6 +32,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTT = new System.Windows.Forms.Panel();
+            this.newTtButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.listTT = new System.Windows.Forms.ComboBox();
             this.menuButtonStat = new System.Windows.Forms.Button();
             this.menuButtonTimetable = new System.Windows.Forms.Button();
@@ -55,12 +57,8 @@
             this.savegroups_button = new System.Windows.Forms.Button();
             this.panelStat = new System.Windows.Forms.Panel();
             this.pGroupsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.редактироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.переместитьВГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.newTtButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTT.SuspendLayout();
@@ -119,6 +117,25 @@
             this.panelTT.Size = new System.Drawing.Size(152, 84);
             this.panelTT.TabIndex = 3;
             this.panelTT.Visible = false;
+            // 
+            // newTtButton
+            // 
+            this.newTtButton.Location = new System.Drawing.Point(3, 43);
+            this.newTtButton.Name = "newTtButton";
+            this.newTtButton.Size = new System.Drawing.Size(146, 23);
+            this.newTtButton.TabIndex = 2;
+            this.newTtButton.Text = "Новое расписание";
+            this.newTtButton.UseVisualStyleBackColor = true;
+            this.newTtButton.Click += new System.EventHandler(this.newTtButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Выбрать расписание:";
             // 
             // listTT
             // 
@@ -186,8 +203,8 @@
             // 
             // panelContentContainer
             // 
-            this.panelContentContainer.Controls.Add(this.panelTimetable);
             this.panelContentContainer.Controls.Add(this.panelPlayersContent);
+            this.panelContentContainer.Controls.Add(this.panelTimetable);
             this.panelContentContainer.Controls.Add(this.panelStat);
             this.panelContentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContentContainer.Location = new System.Drawing.Point(170, 0);
@@ -365,7 +382,6 @@
             this.treeViewPlayerGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewPlayerGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeViewPlayerGroups.ItemHeight = 16;
-            this.treeViewPlayerGroups.LabelEdit = true;
             this.treeViewPlayerGroups.Location = new System.Drawing.Point(3, 3);
             this.treeViewPlayerGroups.Name = "treeViewPlayerGroups";
             this.treeViewPlayerGroups.Size = new System.Drawing.Size(904, 601);
@@ -401,26 +417,10 @@
             // pGroupsContextMenu
             // 
             this.pGroupsContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.удалитьToolStripMenuItem,
-            this.редактироватьToolStripMenuItem,
             this.переместитьВГруппуToolStripMenuItem,
             this.расписаниеToolStripMenuItem});
             this.pGroupsContextMenu.Name = "pGroupsContextMenu";
-            this.pGroupsContextMenu.Size = new System.Drawing.Size(197, 92);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
-            // 
-            // редактироватьToolStripMenuItem
-            // 
-            this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
-            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.редактироватьToolStripMenuItem.Text = "Редактировать";
-            this.редактироватьToolStripMenuItem.Click += new System.EventHandler(this.редактироватьToolStripMenuItem_Click);
+            this.pGroupsContextMenu.Size = new System.Drawing.Size(197, 48);
             // 
             // переместитьВГруппуToolStripMenuItem
             // 
@@ -435,25 +435,6 @@
             this.расписаниеToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.расписаниеToolStripMenuItem.Text = "Расписание";
             this.расписаниеToolStripMenuItem.Click += new System.EventHandler(this.расписаниеToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Выбрать расписание:";
-            // 
-            // newTtButton
-            // 
-            this.newTtButton.Location = new System.Drawing.Point(3, 43);
-            this.newTtButton.Name = "newTtButton";
-            this.newTtButton.Size = new System.Drawing.Size(146, 23);
-            this.newTtButton.TabIndex = 2;
-            this.newTtButton.Text = "Новое расписание";
-            this.newTtButton.UseVisualStyleBackColor = true;
-            this.newTtButton.Click += new System.EventHandler(this.newTtButton_Click);
             // 
             // Form1
             // 
@@ -497,8 +478,6 @@
         private System.Windows.Forms.GroupBox groupBoxPlayersGroups;
         private System.Windows.Forms.TreeView treeViewPlayerGroups;
         private System.Windows.Forms.ContextMenuStrip pGroupsContextMenu;
-        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem редактироватьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem переместитьВГруппуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem расписаниеToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
