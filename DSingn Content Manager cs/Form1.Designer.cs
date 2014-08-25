@@ -378,7 +378,7 @@
             // treeViewPlayerGroups
             // 
             this.treeViewPlayerGroups.AllowDrop = true;
-            this.treeViewPlayerGroups.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.treeViewPlayerGroups.BackColor = System.Drawing.SystemColors.Window;
             this.treeViewPlayerGroups.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeViewPlayerGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewPlayerGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
