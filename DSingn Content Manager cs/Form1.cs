@@ -220,6 +220,8 @@ namespace DSingn_Content_Manager_cs
 
         private void getUserFiles()
         {
+            if (userFilesListView.Items.Count > 0)
+                userFilesListView.Items.Clear();
             string response = DSHttp.Instance.queryServer(Constants.HTTP_METHOD_GET, "filelist", null, null, null);
             List<string> fileNames = JsonConvert.DeserializeObject<List<string>>(response);
             foreach (string filename in fileNames)
