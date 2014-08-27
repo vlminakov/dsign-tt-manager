@@ -16,3 +16,4 @@ C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DS
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.pdb
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.TTSetNameWnd.resources
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn_Content_Manager_cs.PlayersListWnd.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSingn Content Manager cs\obj\Debug\DSingn Content Manager cs.csproj.ResolveComReference.cache

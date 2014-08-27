@@ -18,6 +18,8 @@ namespace DSUI
         public TimeLineControl TimelineDelegate { get; set; }
 
         public bool dragged { get; set; }
+        public bool Selected { get; set; }
+
 
         public bool Dragged
         {
@@ -74,16 +76,17 @@ namespace DSUI
                 {
                     DoDragDrop(this.Clone(), DragDropEffects.Copy);
                 }
-            }
-            if (e.Button.Equals(MouseButtons.Right) && type == Constants.PREVIEW_ITEM_TYPE_IMAGE)
-            {
-                if (dragged)
+                else
                 {
-                    if (type == Constants.PREVIEW_ITEM_TYPE_IMAGE)
+                    if (!Selected)
                     {
-                        SetDurationWnd wnd = new SetDurationWnd();
-                        wnd._delegate = this;
-                        wnd.ShowDialog();
+                        Selected = true;
+                        BackColor = Color.DarkGray;
+                    }
+                    else
+                    {
+                        Selected = false;
+                        BackColor = Color.White;
                     }
                 }
             }

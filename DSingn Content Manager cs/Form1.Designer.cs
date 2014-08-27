@@ -39,6 +39,11 @@
             this.menuButtonTimetable = new System.Windows.Forms.Button();
             this.menuButtonPlayers = new System.Windows.Forms.Button();
             this.panelContentContainer = new System.Windows.Forms.Panel();
+            this.panelPlayersContent = new System.Windows.Forms.Panel();
+            this.groupBoxPlayersGroups = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.treeViewPlayerGroups = new System.Windows.Forms.TreeView();
+            this.savegroups_button = new System.Windows.Forms.Button();
             this.panelTimetable = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.filesTabControll = new System.Windows.Forms.TabControl();
@@ -50,19 +55,20 @@
             this.panel_a = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.panelPlayersContent = new System.Windows.Forms.Panel();
-            this.groupBoxPlayersGroups = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.treeViewPlayerGroups = new System.Windows.Forms.TreeView();
-            this.savegroups_button = new System.Windows.Forms.Button();
             this.panelStat = new System.Windows.Forms.Panel();
             this.pGroupsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.переместитьВГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.userFilesListView = new System.Windows.Forms.ListView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTT.SuspendLayout();
             this.panelContentContainer.SuspendLayout();
+            this.panelPlayersContent.SuspendLayout();
+            this.groupBoxPlayersGroups.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.panelTimetable.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.filesTabControll.SuspendLayout();
@@ -70,10 +76,9 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panelPlayersContent.SuspendLayout();
-            this.groupBoxPlayersGroups.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
+            this.panelStat.SuspendLayout();
             this.pGroupsContextMenu.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -203,15 +208,82 @@
             // 
             // panelContentContainer
             // 
+            this.panelContentContainer.Controls.Add(this.panelStat);
             this.panelContentContainer.Controls.Add(this.panelPlayersContent);
             this.panelContentContainer.Controls.Add(this.panelTimetable);
-            this.panelContentContainer.Controls.Add(this.panelStat);
             this.panelContentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContentContainer.Location = new System.Drawing.Point(170, 0);
             this.panelContentContainer.Margin = new System.Windows.Forms.Padding(0);
             this.panelContentContainer.Name = "panelContentContainer";
             this.panelContentContainer.Size = new System.Drawing.Size(916, 655);
             this.panelContentContainer.TabIndex = 1;
+            // 
+            // panelPlayersContent
+            // 
+            this.panelPlayersContent.BackColor = System.Drawing.SystemColors.Control;
+            this.panelPlayersContent.Controls.Add(this.groupBoxPlayersGroups);
+            this.panelPlayersContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPlayersContent.Location = new System.Drawing.Point(0, 0);
+            this.panelPlayersContent.Name = "panelPlayersContent";
+            this.panelPlayersContent.Size = new System.Drawing.Size(916, 655);
+            this.panelPlayersContent.TabIndex = 0;
+            this.panelPlayersContent.Visible = false;
+            // 
+            // groupBoxPlayersGroups
+            // 
+            this.groupBoxPlayersGroups.Controls.Add(this.tableLayoutPanel4);
+            this.groupBoxPlayersGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxPlayersGroups.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxPlayersGroups.Name = "groupBoxPlayersGroups";
+            this.groupBoxPlayersGroups.Size = new System.Drawing.Size(916, 655);
+            this.groupBoxPlayersGroups.TabIndex = 0;
+            this.groupBoxPlayersGroups.TabStop = false;
+            this.groupBoxPlayersGroups.Text = "Группы Плееров";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.treeViewPlayerGroups, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.savegroups_button, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.59748F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.402516F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(910, 636);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // treeViewPlayerGroups
+            // 
+            this.treeViewPlayerGroups.AllowDrop = true;
+            this.treeViewPlayerGroups.BackColor = System.Drawing.SystemColors.Window;
+            this.treeViewPlayerGroups.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeViewPlayerGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewPlayerGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.treeViewPlayerGroups.ItemHeight = 16;
+            this.treeViewPlayerGroups.Location = new System.Drawing.Point(3, 3);
+            this.treeViewPlayerGroups.Name = "treeViewPlayerGroups";
+            this.treeViewPlayerGroups.Size = new System.Drawing.Size(904, 601);
+            this.treeViewPlayerGroups.TabIndex = 0;
+            this.treeViewPlayerGroups.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.pGroups_BeforeLabelEdit);
+            this.treeViewPlayerGroups.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.pGroups_AfterLabelEdit);
+            this.treeViewPlayerGroups.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewPlayerGroups_ItemDrag);
+            this.treeViewPlayerGroups.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.pGroupsMouseClick);
+            this.treeViewPlayerGroups.DragDrop += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragDrop);
+            this.treeViewPlayerGroups.DragEnter += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragEnter);
+            this.treeViewPlayerGroups.DragOver += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragOver);
+            // 
+            // savegroups_button
+            // 
+            this.savegroups_button.Location = new System.Drawing.Point(3, 610);
+            this.savegroups_button.Name = "savegroups_button";
+            this.savegroups_button.Size = new System.Drawing.Size(146, 23);
+            this.savegroups_button.TabIndex = 0;
+            this.savegroups_button.Text = "Сохранить";
+            this.savegroups_button.UseVisualStyleBackColor = true;
+            this.savegroups_button.Click += new System.EventHandler(this.savegroups_button_Click);
             // 
             // panelTimetable
             // 
@@ -338,76 +410,11 @@
             this.tabControl1.Size = new System.Drawing.Size(916, 288);
             this.tabControl1.TabIndex = 7;
             // 
-            // panelPlayersContent
-            // 
-            this.panelPlayersContent.BackColor = System.Drawing.SystemColors.Control;
-            this.panelPlayersContent.Controls.Add(this.groupBoxPlayersGroups);
-            this.panelPlayersContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPlayersContent.Location = new System.Drawing.Point(0, 0);
-            this.panelPlayersContent.Name = "panelPlayersContent";
-            this.panelPlayersContent.Size = new System.Drawing.Size(916, 655);
-            this.panelPlayersContent.TabIndex = 0;
-            this.panelPlayersContent.Visible = false;
-            // 
-            // groupBoxPlayersGroups
-            // 
-            this.groupBoxPlayersGroups.Controls.Add(this.tableLayoutPanel4);
-            this.groupBoxPlayersGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxPlayersGroups.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxPlayersGroups.Name = "groupBoxPlayersGroups";
-            this.groupBoxPlayersGroups.Size = new System.Drawing.Size(916, 655);
-            this.groupBoxPlayersGroups.TabIndex = 0;
-            this.groupBoxPlayersGroups.TabStop = false;
-            this.groupBoxPlayersGroups.Text = "Группы Плееров";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.treeViewPlayerGroups, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.savegroups_button, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.59748F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.402516F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(910, 636);
-            this.tableLayoutPanel4.TabIndex = 1;
-            // 
-            // treeViewPlayerGroups
-            // 
-            this.treeViewPlayerGroups.AllowDrop = true;
-            this.treeViewPlayerGroups.BackColor = System.Drawing.SystemColors.Window;
-            this.treeViewPlayerGroups.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeViewPlayerGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeViewPlayerGroups.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.treeViewPlayerGroups.ItemHeight = 16;
-            this.treeViewPlayerGroups.Location = new System.Drawing.Point(3, 3);
-            this.treeViewPlayerGroups.Name = "treeViewPlayerGroups";
-            this.treeViewPlayerGroups.Size = new System.Drawing.Size(904, 601);
-            this.treeViewPlayerGroups.TabIndex = 0;
-            this.treeViewPlayerGroups.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.pGroups_BeforeLabelEdit);
-            this.treeViewPlayerGroups.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.pGroups_AfterLabelEdit);
-            this.treeViewPlayerGroups.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeViewPlayerGroups_ItemDrag);
-            this.treeViewPlayerGroups.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.pGroupsMouseClick);
-            this.treeViewPlayerGroups.DragDrop += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragDrop);
-            this.treeViewPlayerGroups.DragEnter += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragEnter);
-            this.treeViewPlayerGroups.DragOver += new System.Windows.Forms.DragEventHandler(this.treeViewPlayerGroups_DragOver);
-            // 
-            // savegroups_button
-            // 
-            this.savegroups_button.Location = new System.Drawing.Point(3, 610);
-            this.savegroups_button.Name = "savegroups_button";
-            this.savegroups_button.Size = new System.Drawing.Size(146, 23);
-            this.savegroups_button.TabIndex = 0;
-            this.savegroups_button.Text = "Сохранить";
-            this.savegroups_button.UseVisualStyleBackColor = true;
-            this.savegroups_button.Click += new System.EventHandler(this.savegroups_button_Click);
-            // 
             // panelStat
             // 
-            this.panelStat.BackColor = System.Drawing.Color.Tomato;
+            this.panelStat.BackColor = System.Drawing.Color.White;
+            this.panelStat.Controls.Add(this.userFilesListView);
+            this.panelStat.Controls.Add(this.flowLayoutPanel1);
             this.panelStat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStat.Location = new System.Drawing.Point(0, 0);
             this.panelStat.Name = "panelStat";
@@ -437,6 +444,41 @@
             this.расписаниеToolStripMenuItem.Text = "Расписание";
             this.расписаниеToolStripMenuItem.Click += new System.EventHandler(this.расписаниеToolStripMenuItem_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 626);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(916, 29);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(787, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Сгенерировать Отчет";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // userFilesListView
+            // 
+            this.userFilesListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userFilesListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userFilesListView.Location = new System.Drawing.Point(0, 0);
+            this.userFilesListView.Margin = new System.Windows.Forms.Padding(0);
+            this.userFilesListView.Name = "userFilesListView";
+            this.userFilesListView.Size = new System.Drawing.Size(916, 626);
+            this.userFilesListView.TabIndex = 1;
+            this.userFilesListView.UseCompatibleStateImageBehavior = false;
+            this.userFilesListView.View = System.Windows.Forms.View.List;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,6 +492,9 @@
             this.panelTT.ResumeLayout(false);
             this.panelTT.PerformLayout();
             this.panelContentContainer.ResumeLayout(false);
+            this.panelPlayersContent.ResumeLayout(false);
+            this.groupBoxPlayersGroups.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.panelTimetable.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.filesTabControll.ResumeLayout(false);
@@ -457,10 +502,11 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.panelPlayersContent.ResumeLayout(false);
-            this.groupBoxPlayersGroups.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panelStat.ResumeLayout(false);
+            this.panelStat.PerformLayout();
             this.pGroupsContextMenu.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -497,6 +543,9 @@
         private System.Windows.Forms.ComboBox listTT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button newTtButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView userFilesListView;
         //private DSUI.TimeLineControl timeLineControl1;
     }
 }

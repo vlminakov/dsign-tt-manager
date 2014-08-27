@@ -210,12 +210,24 @@ namespace DSingn_Content_Manager_cs
                     break;
                 case Constants.MENU_BUTTON_STAT:
                     panelStat.Visible = true;
+                    this.getUserFiles();
                     break;
                 default:
                     break;
             }
             
         }
+
+        private void getUserFiles()
+        {
+            string response = DSHttp.Instance.queryServer(Constants.HTTP_METHOD_GET, "filelist", null, null, null);
+            List<string> fileNames = JsonConvert.DeserializeObject<List<string>>(response);
+            foreach (string filename in fileNames)
+            {
+                this.userFilesListView.Items.Add(new ListViewItem(filename));
+            }
+        }
+
         private PlayersGroup __tempPg = null;
         private void treeViewPlayerGroups_ItemDrag(object sender, ItemDragEventArgs e)
         {
@@ -655,14 +667,44 @@ namespace DSingn_Content_Manager_cs
 
         }
 
+        private List<PreviewItem> copiedContent;
         public void copyCurrent(TimeLineControl tc)
         {
-            MessageBox.Show("save TT");
+            if (copiedContent == null)
+                copiedContent = new List<PreviewItem>();
+            if (copiedContent.Count > 0)
+                copiedContent.Clear();
+            foreach (PreviewItem pi in tc.Items)
+            {
+                if (pi.Selected)
+                {
+                    copiedContent.Add((PreviewItem)pi.Clone());
+                }
+            }
+            if (copiedContent.Count == 0)
+                MessageBox.Show("Вы ни чего не выделили");
         }
 
-        public void copyAll()
+        public void copyAll(TimeLineControl tc)
         {
-            MessageBox.Show("save TT");
+            if (copiedContent == null)
+                copiedContent = new List<PreviewItem>();
+            if (copiedContent.Count > 0)
+                copiedContent.Clear();
+            foreach (PreviewItem pi in tc.Items)
+            {
+                copiedContent.Add((PreviewItem)pi.Clone());
+            }
+        }
+
+        public void pasteContent(TimeLineControl tc)
+        {
+            if (copiedContent != null && copiedContent.Count > 0){
+                foreach (PreviewItem pi in copiedContent)
+                {
+                    tc.addItem((PreviewItem)pi.Clone());
+                }
+            }
         }
 
         private int currentTtId = 0;
@@ -722,6 +764,27 @@ namespace DSingn_Content_Manager_cs
         public void set_ass_player(int pid)
         {
             this.pid = pid;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // GENERATE REPORT
+            List<List<FileReportObject>> report = new List<List<FileReportObject>>();
+            string[] filenames;
+            List<string> files = new List<string>();
+            foreach (ListViewItem item in userFilesListView.SelectedItems)
+            {
+                Debug.WriteLine(item.Text);
+                files.Add(item.Text);
+                //List<FileReportObject> fileReport = JsonConvert.DeserializeObject<List<FileReportObject>>(DSHttp.Instance.queryServer(Constants.HTTP_METHOD_GET,
+                //    "getstat", null, new []{new KeyValuePair<string, string>("filename", item.Text)},null));
+                report.Add(JsonConvert.DeserializeObject<List<FileReportObject>>(DSHttp.Instance.queryServer(Constants.HTTP_METHOD_GET,
+                    "getstat", null, new[] { new KeyValuePair<string, string>("filename", item.Text) }, null)));
+            }
+            filenames = new string[report.Count];
+            files.CopyTo(filenames);
+            ExcelLayer eLayer = new ExcelLayer();
+            eLayer.createReport(report, filenames);
         }
     }
 }

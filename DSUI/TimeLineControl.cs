@@ -46,12 +46,52 @@ namespace DSUI
             if (items == null)
                 items = new List<PreviewItem>();
             PreviewItem item = (PreviewItem)e.Data.GetData(typeof(PreviewItem));
+            addItem(item);
+        }
+
+        public void addItem(PreviewItem item)
+        {
             flLayout.Controls.Add(item);
             Add(item);
             item.Dragged = true;
             this.duration += (int)Convert.ToDouble(item.Duration);
             this.durationLabel.Text = this.duration.ToString() + " сек.";
             item.TimelineDelegate = this;
+            if (item.Type == Constants.PREVIEW_ITEM_TYPE_IMAGE && item.Duration.Equals("0"))
+            {
+                SetDurationWnd wnd = new SetDurationWnd();
+                wnd._delegate = item;
+                wnd.ShowDialog();
+            }
+        }
+
+        private void deleteItems()
+        {
+            if (flLayout.Controls.Count > 0)
+            {
+                int count = 0;
+                foreach (PreviewItem pri in flLayout.Controls)
+                {
+                    if (pri.Selected)
+                        count++;
+                }
+                for (int i = 0; i < count; i++)
+                {
+                    foreach (PreviewItem pri in flLayout.Controls)
+                    {
+                        if (pri.Selected)
+                        {
+                            this.duration -= (int)Convert.ToDouble(pri.Duration);
+                            flLayout.Controls.Remove(pri);
+                            this.items.Remove(pri);
+                            pri.Dispose();
+                            break;
+                        }
+                        
+                    }
+                }
+                this.durationLabel.Text = this.duration.ToString();
+            }
         }
 
         private void timelineContent_DragOver(object sender, DragEventArgs e)
@@ -82,7 +122,7 @@ namespace DSUI
 
         private void button6_Click(object sender, EventArgs e)
         {
-            delegateForm1.copyAll();
+            delegateForm1.copyAll(this);
         }
 
         public void setDay(DSingn_Content_Manager_cs.Day day)
@@ -173,6 +213,16 @@ namespace DSUI
             this.duration = 0;
             this.durationLabel.Text = this.duration.ToString() + " сек";
             this.dateTimePicker1.ResetText();
+        }
+
+        private void buttonPaste_Click(object sender, EventArgs e)
+        {
+            delegateForm1.pasteContent(this);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            this.deleteItems();
         }
     }
 }

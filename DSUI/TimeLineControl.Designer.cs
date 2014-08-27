@@ -41,6 +41,8 @@
             this.assignPlayerBtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.buttonPaste = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.timelineContent.SuspendLayout();
             this.timeline_panel.SuspendLayout();
@@ -123,25 +125,28 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.AutoSize = true;
-            this.tableLayoutPanel4.ColumnCount = 6;
+            this.tableLayoutPanel4.ColumnCount = 8;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel4.Controls.Add(this.durationLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.button3, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.assignPlayerBtn, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.button5, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.button6, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonPaste, 6, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonDelete, 7, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 249);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1077, 29);
             this.tableLayoutPanel4.TabIndex = 7;
             // 
@@ -159,7 +164,7 @@
             // button2
             // 
             this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(607, 3);
+            this.button2.Location = new System.Drawing.Point(455, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 23);
             this.button2.TabIndex = 1;
@@ -170,7 +175,7 @@
             // button3
             // 
             this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(707, 3);
+            this.button3.Location = new System.Drawing.Point(555, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(70, 23);
             this.button3.TabIndex = 2;
@@ -181,7 +186,7 @@
             // assignPlayerBtn
             // 
             this.assignPlayerBtn.AutoSize = true;
-            this.assignPlayerBtn.Location = new System.Drawing.Point(783, 3);
+            this.assignPlayerBtn.Location = new System.Drawing.Point(631, 3);
             this.assignPlayerBtn.Name = "assignPlayerBtn";
             this.assignPlayerBtn.Size = new System.Drawing.Size(104, 23);
             this.assignPlayerBtn.TabIndex = 3;
@@ -192,7 +197,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.Location = new System.Drawing.Point(893, 3);
+            this.button5.Location = new System.Drawing.Point(741, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(77, 23);
             this.button5.TabIndex = 4;
@@ -203,13 +208,33 @@
             // button6
             // 
             this.button6.AutoSize = true;
-            this.button6.Location = new System.Drawing.Point(976, 3);
+            this.button6.Location = new System.Drawing.Point(824, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(98, 23);
             this.button6.TabIndex = 5;
             this.button6.Text = "Копировать всё";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // buttonPaste
+            // 
+            this.buttonPaste.Location = new System.Drawing.Point(928, 3);
+            this.buttonPaste.Name = "buttonPaste";
+            this.buttonPaste.Size = new System.Drawing.Size(70, 23);
+            this.buttonPaste.TabIndex = 6;
+            this.buttonPaste.Text = "Вставить";
+            this.buttonPaste.UseVisualStyleBackColor = true;
+            this.buttonPaste.Click += new System.EventHandler(this.buttonPaste_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(1004, 3);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(70, 23);
+            this.buttonDelete.TabIndex = 7;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // TimeLineControl
             // 
@@ -248,6 +273,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel timeline_panel;
         private System.Windows.Forms.FlowLayoutPanel flLayout;
+        private System.Windows.Forms.Button buttonPaste;
+        private System.Windows.Forms.Button buttonDelete;
 
     }
 }
