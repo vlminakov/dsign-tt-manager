@@ -39,6 +39,10 @@
             this.menuButtonTimetable = new System.Windows.Forms.Button();
             this.menuButtonPlayers = new System.Windows.Forms.Button();
             this.panelContentContainer = new System.Windows.Forms.Panel();
+            this.panelStat = new System.Windows.Forms.Panel();
+            this.userFilesListView = new System.Windows.Forms.ListView();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelPlayersContent = new System.Windows.Forms.Panel();
             this.groupBoxPlayersGroups = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -55,17 +59,15 @@
             this.panel_a = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.panelStat = new System.Windows.Forms.Panel();
             this.pGroupsContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.переместитьВГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.расписаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.userFilesListView = new System.Windows.Forms.ListView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTT.SuspendLayout();
             this.panelContentContainer.SuspendLayout();
+            this.panelStat.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panelPlayersContent.SuspendLayout();
             this.groupBoxPlayersGroups.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -76,9 +78,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panelStat.SuspendLayout();
             this.pGroupsContextMenu.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -217,6 +217,53 @@
             this.panelContentContainer.Name = "panelContentContainer";
             this.panelContentContainer.Size = new System.Drawing.Size(916, 655);
             this.panelContentContainer.TabIndex = 1;
+            // 
+            // panelStat
+            // 
+            this.panelStat.BackColor = System.Drawing.Color.White;
+            this.panelStat.Controls.Add(this.userFilesListView);
+            this.panelStat.Controls.Add(this.flowLayoutPanel1);
+            this.panelStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStat.Location = new System.Drawing.Point(0, 0);
+            this.panelStat.Name = "panelStat";
+            this.panelStat.Size = new System.Drawing.Size(916, 655);
+            this.panelStat.TabIndex = 0;
+            this.panelStat.Visible = false;
+            // 
+            // userFilesListView
+            // 
+            this.userFilesListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userFilesListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.userFilesListView.Location = new System.Drawing.Point(0, 0);
+            this.userFilesListView.Margin = new System.Windows.Forms.Padding(0);
+            this.userFilesListView.Name = "userFilesListView";
+            this.userFilesListView.Size = new System.Drawing.Size(916, 626);
+            this.userFilesListView.TabIndex = 1;
+            this.userFilesListView.UseCompatibleStateImageBehavior = false;
+            this.userFilesListView.View = System.Windows.Forms.View.List;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 626);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(916, 29);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(787, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Сгенерировать Отчет";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelPlayersContent
             // 
@@ -410,18 +457,6 @@
             this.tabControl1.Size = new System.Drawing.Size(916, 288);
             this.tabControl1.TabIndex = 7;
             // 
-            // panelStat
-            // 
-            this.panelStat.BackColor = System.Drawing.Color.White;
-            this.panelStat.Controls.Add(this.userFilesListView);
-            this.panelStat.Controls.Add(this.flowLayoutPanel1);
-            this.panelStat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStat.Location = new System.Drawing.Point(0, 0);
-            this.panelStat.Name = "panelStat";
-            this.panelStat.Size = new System.Drawing.Size(916, 655);
-            this.panelStat.TabIndex = 0;
-            this.panelStat.Visible = false;
-            // 
             // pGroupsContextMenu
             // 
             this.pGroupsContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -444,41 +479,6 @@
             this.расписаниеToolStripMenuItem.Text = "Расписание";
             this.расписаниеToolStripMenuItem.Click += new System.EventHandler(this.расписаниеToolStripMenuItem_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 626);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(916, 29);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(787, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Сгенерировать Отчет";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // userFilesListView
-            // 
-            this.userFilesListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userFilesListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userFilesListView.Location = new System.Drawing.Point(0, 0);
-            this.userFilesListView.Margin = new System.Windows.Forms.Padding(0);
-            this.userFilesListView.Name = "userFilesListView";
-            this.userFilesListView.Size = new System.Drawing.Size(916, 626);
-            this.userFilesListView.TabIndex = 1;
-            this.userFilesListView.UseCompatibleStateImageBehavior = false;
-            this.userFilesListView.View = System.Windows.Forms.View.List;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,12 +486,16 @@
             this.ClientSize = new System.Drawing.Size(1086, 655);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DSign - manager";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelTT.ResumeLayout(false);
             this.panelTT.PerformLayout();
             this.panelContentContainer.ResumeLayout(false);
+            this.panelStat.ResumeLayout(false);
+            this.panelStat.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.panelPlayersContent.ResumeLayout(false);
             this.groupBoxPlayersGroups.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -502,11 +506,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.panelStat.ResumeLayout(false);
-            this.panelStat.PerformLayout();
             this.pGroupsContextMenu.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
