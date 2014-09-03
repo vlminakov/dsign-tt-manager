@@ -12,3 +12,4 @@ C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DS
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Debug\DSUI.csprojResolveAssemblyReference.cache
 C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Debug\DSUI.SetDurationWnd.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Debug\DSUI.TimeLineMesh.resources

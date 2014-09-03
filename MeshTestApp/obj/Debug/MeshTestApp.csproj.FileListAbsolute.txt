@@ -1,0 +1,15 @@
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\MeshTestApp.exe.config
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\MeshTestApp.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\MeshTestApp.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\DSingn Content Manager cs.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\DSUI.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\DSUI.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\DSingn Content Manager cs.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.csprojResolveAssemblyReference.cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.Form1.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.Properties.Resources.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.csproj.GenerateResource.Cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\MeshTestApp\obj\Debug\MeshTestApp.pdb

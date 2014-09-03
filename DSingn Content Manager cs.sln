@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSingn Content Manager cs",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSUI", "DSUI\DSUI.csproj", "{994E46B0-5824-4166-B5A3-F8FFAF6BBDE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshTestApp", "MeshTestApp\MeshTestApp.csproj", "{014E7B3D-0DE0-4F9E-A770-8F00355177C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{994E46B0-5824-4166-B5A3-F8FFAF6BBDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{994E46B0-5824-4166-B5A3-F8FFAF6BBDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{994E46B0-5824-4166-B5A3-F8FFAF6BBDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{014E7B3D-0DE0-4F9E-A770-8F00355177C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014E7B3D-0DE0-4F9E-A770-8F00355177C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014E7B3D-0DE0-4F9E-A770-8F00355177C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014E7B3D-0DE0-4F9E-A770-8F00355177C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

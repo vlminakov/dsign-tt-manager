@@ -208,9 +208,9 @@
             // 
             // panelContentContainer
             // 
+            this.panelContentContainer.Controls.Add(this.panelTimetable);
             this.panelContentContainer.Controls.Add(this.panelStat);
             this.panelContentContainer.Controls.Add(this.panelPlayersContent);
-            this.panelContentContainer.Controls.Add(this.panelTimetable);
             this.panelContentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContentContainer.Location = new System.Drawing.Point(170, 0);
             this.panelContentContainer.Margin = new System.Windows.Forms.Padding(0);
@@ -354,8 +354,8 @@
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 288F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(916, 655);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -365,11 +365,11 @@
             this.filesTabControll.Controls.Add(this.tabPage2);
             this.filesTabControll.Controls.Add(this.tabPage3);
             this.filesTabControll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filesTabControll.Location = new System.Drawing.Point(0, 288);
+            this.filesTabControll.Location = new System.Drawing.Point(0, 505);
             this.filesTabControll.Margin = new System.Windows.Forms.Padding(0);
             this.filesTabControll.Name = "filesTabControll";
             this.filesTabControll.SelectedIndex = 0;
-            this.filesTabControll.Size = new System.Drawing.Size(916, 367);
+            this.filesTabControll.Size = new System.Drawing.Size(916, 150);
             this.filesTabControll.TabIndex = 0;
             // 
             // tabPage1
@@ -418,7 +418,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(908, 341);
+            this.tabPage3.Size = new System.Drawing.Size(908, 124);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Аудио";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -429,7 +429,7 @@
             this.panel_a.Location = new System.Drawing.Point(0, 0);
             this.panel_a.Margin = new System.Windows.Forms.Padding(0);
             this.panel_a.Name = "panel_a";
-            this.panel_a.Size = new System.Drawing.Size(908, 341);
+            this.panel_a.Size = new System.Drawing.Size(908, 124);
             this.panel_a.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -444,7 +444,7 @@
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 288F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(916, 288);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(916, 505);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tabControl1
@@ -454,7 +454,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(916, 288);
+            this.tabControl1.Size = new System.Drawing.Size(916, 505);
             this.tabControl1.TabIndex = 7;
             // 
             // pGroupsContextMenu
