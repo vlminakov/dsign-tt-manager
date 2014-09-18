@@ -48,6 +48,9 @@
     <Compile Include="DSPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PreviewItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
