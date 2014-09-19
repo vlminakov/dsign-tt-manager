@@ -1,0 +1,14 @@
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\DSUI.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\DSUI.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\DSingn Content Manager cs.exe
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\DSingn Content Manager cs.pdb
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\bin\Release\Newtonsoft.Json.xml
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.csprojResolveAssemblyReference.cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.PreviewItem.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.Properties.Resources.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.SetDurationWnd.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.TimeLineControl.resources
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.csproj.GenerateResource.Cache
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.dll
+C:\Users\Mara\documents\visual studio 2013\Projects\DSingn Content Manager cs\DSUI\obj\Release\DSUI.pdb

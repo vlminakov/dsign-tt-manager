@@ -9,7 +9,7 @@ namespace DSingn_Content_Manager_cs
     static class Constants
     {
         public const string FTP_HOME                = "ftp://dsign.uk/";
-        public const string HTTP_BASE_URL           = "http://dsign.uk/";
+        public const string HTTP_BASE_URL           = "http://dsign.by/";
         public const string HTTP_LOGIN_PATH         = "login";
         public const string HTTP_GROUPS_PATH        = "groups";
 

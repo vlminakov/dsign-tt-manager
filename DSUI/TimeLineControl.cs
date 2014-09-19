@@ -150,7 +150,7 @@ namespace DSUI
                 }
                 else if (fd.Name.IndexOf(".mp3") != -1)
                 {
-                    imgName = "test.png";
+                    imgName = "audio.png";
                     pi.Type = Constants.PREVIEW_ITEM_TYPE_AUDIO;
                 }
                 else
@@ -163,6 +163,7 @@ namespace DSUI
                     Image img = Image.FromFile("images\\" + imgName);
                     pi.setImage(img);
                     pi.Width = 100;
+                    //pi.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     flLayout.Controls.Add(pi);
                     Add(pi);
                 }

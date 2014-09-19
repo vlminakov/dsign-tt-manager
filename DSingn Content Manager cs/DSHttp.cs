@@ -49,7 +49,10 @@ namespace DSingn_Content_Manager_cs
                         hdrStr += str + ";";
                     }
                     WebHeaderCollection whc = new WebHeaderCollection();
-                    whc.Add(HttpRequestHeader.Cookie, cookies[1]);
+                    foreach (string v in cookies)
+                    {
+                        whc.Add(HttpRequestHeader.Cookie, v);
+                    }
                     wc.Headers.Add(whc);
                 }
                 if (headers != null && headers.Length > 0)

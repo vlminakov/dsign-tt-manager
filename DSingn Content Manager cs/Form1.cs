@@ -62,13 +62,8 @@ namespace DSingn_Content_Manager_cs
 
         private string getPlayerGroups(string uuid)
         {
-            string res = DSHttp.Instance.queryServer(Constants.HTTP_METHOD_POST, Constants.HTTP_GROUPS_PATH, new[]{
-                new KeyValuePair<string, string>("Content-Type", "application/x-www-form-urlencoded")
-            },
-            new[] {
-                new KeyValuePair<string, string>("ClientType","3"),
-                new KeyValuePair<string, string>("uuid",uuid)
-            }, null);
+            string res = DSHttp.Instance.queryServer(Constants.HTTP_METHOD_GET, Constants.HTTP_GROUPS_PATH, null,
+            null, null);
 
             Debug.WriteLine(res);
             return res;
@@ -477,7 +472,7 @@ namespace DSingn_Content_Manager_cs
                 
                 if (fd.type.Equals("audio"))
                 {
-                    pi.setImage(Image.FromFile("images\\test.png"));
+                    pi.setImage(Image.FromFile("images\\audio.png"));
                     pi.SetBounds(pi.Width * audioIndex + 3 * audioIndex, 3, pi.Width, pi.Height);
                     panel_a.Controls.Add(pi);
                     audioIndex++;
